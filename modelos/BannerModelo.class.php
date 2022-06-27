@@ -11,12 +11,8 @@ class BannerModelo extends Modelo{
     
     public function InsertarPublicidad(){
 
-        //$query = "INSERT INTO Banner(nombre,imagen,url) 
-        //VALUES('" . $this->Nombre . "','" . $this->Imagen . "' ,'"  . $this->Url . "')";
-       
-        
-        echo "INSERT INTO Banner (nombre, imagen, url) values  ('" . $this -> Nombre. "','" . $this -> Imagen . "','" . $this -> Url . "')";
+        $query = "INSERT INTO Banner(nombre,imagen,url) VALUES('" . $this->Nombre . "','" . $this->Imagen . "' ,'"  . $this->Url . "')";
         $this -> conexion -> query($query);
-
+       
     }  
 }
