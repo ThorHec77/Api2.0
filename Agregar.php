@@ -1,9 +1,8 @@
 <?php
-require $_SERVER['DOCUMENT_ROOT'] ."/ApiPublicidad/utils/autoload.php";
+require $_SERVER['DOCUMENT_ROOT'] ."/ApiPublicidad2.0/utils/autoload.php";
 
 
 $nombre = $_POST['nombre'];
-//$imagen = addslashes[file_get_contents($_FILES['imagen']['tmp_name'])];
 $nombreImagen = $_FILES['imagen']['name'];
 $tipoImagen = $_FILES['imagen']['type'];
 $tamanioImagen = $_FILES['imagen']['size'];
@@ -11,7 +10,7 @@ $url = $_POST['url'];
 
 if ($tamanioImagen <= 1500000) {
     if ($tipoImagen == "image/jpeg" || $tipoImagen == "image/jpg" || $tipoImagen == "image/png") {
-        $carpetaDestino = $_SERVER['DOCUMENT_ROOT'] . "/ApiPublicidad/imagenes/";
+        $carpetaDestino = $_SERVER['DOCUMENT_ROOT'] . "/ApiPublicidad2.0/imagenes/";
         move_uploaded_file($_FILES['imagen']['tmp_name'], $carpetaDestino.$nombreImagen);
     }else{
         echo "solo imagenes con extencion jpg, jpeg, png...";
@@ -21,5 +20,5 @@ if ($tamanioImagen <= 1500000) {
 }
 
 
-
 BannerControlador::InsertarPublicidad($nombre, $nombreImagen, $url);
+
