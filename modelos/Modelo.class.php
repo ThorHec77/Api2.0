@@ -33,7 +33,7 @@
 
         public function verificar(){
             if($this -> conexion){
-                
+                header('location:Index.html');
             } 
         }
 
