@@ -7,10 +7,6 @@
 </head>
 <body>
 	<center>
-		<form action="Eliminar.php" method="POST">
-			<input Type="number" placeholder="numero" name="Id"/>
-			<input type="submit" name="Eliminar">
-		</form>
 		<table border="4">
 			<thead>
 				<tr>
@@ -26,23 +22,24 @@
 			</thead>
 			<tbody>
 				<?php
-
-				echo "ingrese numero de id a eliminar"
-                   
+                   require $_SERVER['DOCUMENT_ROOT'] ."/ApiPublicidad2.0/utils/autoload.php"; 
 				//	$query = "SELECT * FROM Banner2";
-				//	$mostrar = BannerControlador::ObtenerPublicidad();
-					//while ($mostrar->fetch_assoc()) {
-			/*	?>
+					$elementos = array(BannerControlador::ObtenerImagen());
+				
+					while ($row = fetch_all($elementos)) {
+						printf ("%s (%s)\n", $row["Imagen"], $row["Nombre"]);
+					
+				?>
 						<tr>
-							<td><?php echo $mostrar['id']; ?></td>
-							<td><?php echo $mostrar['nombre']; ?></td>
-							<td><img src="imagenes/" . <?php $mostrar['imagen']; ?>></td>
-							<td><?php echo $mostrar['url']; ?></td>
-							<th><a href="Modificar.php?id=<?php echo $row['id']; ?>">Modificar</th>
-							<th><a href="Eliminar.php?id=<?php echo $row['id']; ?>">Eliminar</th>
+							<td><?php echo $elementos['Id']; ?></td>
+							<td><?php echo $elementos['Nombre']; ?></td> 
+							<td><img src="imagenes/" . <?php $row['Imagen']; ?>></td>
+							<td><?php echo $elemntos['Url']; ?></td>  
+							<th><a href="Modificar.php?id=<?php echo $row['id']; ?>">Modificar</th>  
+							<th><a href="Eliminar.php?id=<?php echo $row['id']; ?>">Eliminar</th>   
 						</tr>
 				<?php		
-					}*/
+					}
 				?>
 			</tbody>
 		</table>

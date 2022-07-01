@@ -21,4 +21,5 @@ if ($tamanioImagen <= 1500000) {
 
 
 BannerControlador::InsertarPublicidad($nombre, $nombreImagen, $url);
-
+echo '<script language="javascript">alert("Se guardo la publicidad en base de datos"),window.location.href="Index.html"</script>';
+//header('location:Index.html');

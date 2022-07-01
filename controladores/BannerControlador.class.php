@@ -17,6 +17,12 @@ class BannerControlador{
         $p = new BannerModelo();
         $p -> Id = $id;
         $p -> EliminarPublicidad();
+
+    }
+    public static function ObtenerImagen(){
+
+        $p = new BannerModelo();
+        $p -> ObtenerImagen();
     }
 
 
