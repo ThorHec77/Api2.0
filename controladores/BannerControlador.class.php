@@ -19,6 +19,7 @@ class BannerControlador{
         $p -> EliminarPublicidad();
     }
 
+
     public static function ObtenerPublicidad(){
 
         $p = new BannerModelo();

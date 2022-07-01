@@ -21,4 +21,4 @@ if ($tamanioImagen <= 1500000) {
 
 
 BannerControlador::InsertarPublicidad($nombre, $nombreImagen, $url);
-
+header("Index.html")
