@@ -1,6 +1,6 @@
 <?php
 
-require $_SERVER['DOCUMENT_ROOT'] ."/ApiPublicidad2.0/utils/autoload.php";
+require $_SERVER['DOCUMENT_ROOT'] ."/Api-master/Publicidad2.0/utilsP/autoload.php";
 
 class BannerControlador{
     public static function InsertarPublicidad($nombre, $imagen, $url){

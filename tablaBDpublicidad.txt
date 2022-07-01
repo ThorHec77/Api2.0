@@ -1,0 +1,9 @@
+create database PublicidadBD;
+use PublicidadBD;
+create table Banner2(
+	id integer unsigned not null auto_increment,
+    nombre varchar(25) null,
+    imagen varchar(40) null,
+    url varchar(100) null,
+    primary key(id)
+);
